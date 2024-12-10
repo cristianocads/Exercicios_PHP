@@ -19,7 +19,9 @@ body {
     flex-direction: column;
     flex-wrap: nowrap;
     justify-content: center;
+    margin-top: 30px;
     align-items: center;
+    gap: 15px;
 }
 
 header, main, section, article {
@@ -29,7 +31,6 @@ header, main, section, article {
 header > h1 {
     color: white;
     text-shadow: 3px 3px 0px black;
-    margin: 10px;
 }
 
 main, section, article {

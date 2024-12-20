@@ -7,11 +7,13 @@ Este repositório contém a resolução dos exercícios práticos do curso de **
 ## 📋 Conteúdo
 
 - **Introdução ao PHP**: Primeiros passos, sintaxe básica, e estrutura de um script PHP.
-- **Estruturas de Controle**: Condicionais (`if`, `else`, `switch`) e laços de repetição (`for`, `while`, `do-while`).
+- **Estruturas de Controle**: Condicionais (`if`, `else`, `switch`) e 
+    laços de repetição (`for`, `while`, `do-while`).
 - **Funções**: Criação e uso de funções, parâmetros e retorno de valores.
 - **Manipulação de Strings e Arrays**: Operações básicas, métodos úteis e exercícios aplicados.
 - **Formulários HTML e PHP**: Processamento de dados de formulários.
-- **Interação com Banco de Dados** (se aplicável): Conexão, consultas e manipulação de dados com MySQL.
+- **Interação com Banco de Dados** (se aplicável): Conexão, consultas e manipulação 
+    de dados com MySQL.
 
 ## 📂 Estrutura do Repositório
 
@@ -58,4 +60,5 @@ Este repositório é um projeto pessoal de aprendizado, mas se você encontrar m
 ## 📜 Licença
 
 ```
-Sinta-se à vontade para adaptar as informações ao seu estilo e incluir outros detalhes específicos.
+Sinta-se à vontade para adaptar as informações ao seu estilo e 
+incluir outros detalhes específicos.

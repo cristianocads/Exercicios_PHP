@@ -42,9 +42,11 @@ Cada pasta contém arquivos PHP com a solução dos exercícios correspondentes.
 ## 🚀 Como Usar
 
 1. Clone este repositório:
+
    ```bash
    git clone https://github.com/cristianocads/Exercicios_PHP.git
    ```
+
 2. Configure seu ambiente local e inicie o servidor.
 3. Acesse os exercícios pelo navegador no endereço padrão do servidor local (ex.: `http://localhost/pasta-do-repositorio`).
 
@@ -59,6 +61,6 @@ Este repositório é um projeto pessoal de aprendizado, mas se você encontrar m
 
 ## 📜 Licença
 
-```
+```text
 Sinta-se à vontade para adaptar as informações ao seu estilo e 
 incluir outros detalhes específicos.

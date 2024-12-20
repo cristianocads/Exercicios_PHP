@@ -4,13 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Resposta</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/style.css">
 </head>
 <body>
     <header>
         <nav >
-            <a class="menu" href="index.html">Sucessores</a>
-            <a class="menu" href="#exercicio1">Sorteador</a>
+            <a class="menu" href="/index.html">Início</a>
+            <a class="menu" href="/desafio1/sucessor.html">Sucessor</a>
+            <a class="menu" href="/desafio2/sorteador.html">Sorteador</a>
             <a class="menu" href="#exercicio1">Prática 3</a>
             <a class="menu" href="#exercicio1">Prática 4</a>
         </nav>

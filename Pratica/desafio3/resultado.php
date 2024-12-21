@@ -113,7 +113,7 @@
             // Exibe o resultado da conversão
             echo "<h1>Resultado da Conversão</h1>";
             echo "<p><br>Seus " . numfmt_format_currency($padrao, $real, "BRL") . " reais é equivalente a <strong>" . numfmt_format_currency($padrao, $dolar, 'USD') . " dólares</strong>.</p><br>";
-            echo "<p><em>Cotação do dólar: R$ " . numfmt_format_currency($padrao, $cotacao, "BRL") . "</em></p>";
+            echo "<p><em>Cotação do dólar: " . numfmt_format_currency($padrao, $cotacao, "BRL") . "</em></p>";
 
 
 

@@ -20,7 +20,8 @@
     <main>
         <section class="container">
         <?php
-            if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+           //Conversão completa com API e diversas moedas
+           /*if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 $fromCurrency = $_POST['currencyFrom'];
                 $toCurrency = $_POST['currencyTo'];
                 $amount = floatval($_POST['amount']);
@@ -52,7 +53,71 @@
                 }
             } else {
                 echo "Acesso inválido.";
+            }*/
+
+            // URL da API do Banco Central para pegar o último valor do dólar
+        
+            $url = "https://api.bcb.gov.br/dados/serie/bcdata.sgs.1/dados/ultimos/1?formato=csv";
+
+            // Inicializa o cURL
+            $ch = curl_init();
+            curl_setopt($ch, CURLOPT_URL, $url);
+            curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+
+            // Executa a requisição
+            $response = curl_exec($ch);
+
+            // Fecha cURL
+            curl_close($ch);
+
+            // Verifica se obteve uma resposta válida
+            if ($response) {
+                // Imprime a resposta da API para debug
+                //echo "Resposta da API: " . $response . "<br><br>";
+
+                // A resposta vem no formato CSV. Vamos separar e pegar o valor.
+                $data = explode(';', $response);
+                
+                // Exibe os dados que foram retornados
+                //print_r($data);
+
+                // O valor do dólar estará na segunda posição (índice 1)
+                // Remove as aspas e espaços em branco ao redor da cotação
+                $cotacao = trim($data[2], ' "');
+                // Substitui a vírgula por ponto e converte para float
+                $cotacao = (float) str_replace(',', '.', $cotacao);
+                
+                // Arredonda a cotação para duas casas decimais
+                $cotacao = round($cotacao, 2);
+            } else {
+                echo "Erro ao buscar cotação do dólar.";
+                exit;
             }
+
+            // Recebe o valor em reais enviado pelo usuário
+            $real = $_REQUEST['real'];
+            $real = (float) $real; // Converte para float
+
+            // Verifica se a cotação e o valor em reais são numéricos
+            if (!is_numeric($cotacao) || !is_numeric($real)) {
+                echo "Valor inválido para a conversão.";
+                exit;
+            }
+
+            // Realiza a conversão de reais para dólares
+            $dolar = $real / $cotacao;
+
+            // Define o formato para moeda brasileira (BRL)
+            $padrao = numfmt_create('pt_BR', NumberFormatter::CURRENCY);
+
+            // Exibe o resultado da conversão
+            echo "<h1>Resultado da Conversão</h1>";
+            echo "<p><br>Seus " . numfmt_format_currency($padrao, $real, "BRL") . " reais é equivalente a <strong>" . numfmt_format_currency($padrao, $dolar, 'USD') . " dólares</strong>.</p><br>";
+            echo "<p><em>Cotação do dólar: R$ " . numfmt_format_currency($padrao, $cotacao, "BRL") . "</em></p>";
+
+
+
+
         ?>
         <button onclick="javascript:history.go(-1)">&#x2B05; Voltar</button>
         <!--<p><a href="javascript:history.go(-1)">Voltar</a></p>-->

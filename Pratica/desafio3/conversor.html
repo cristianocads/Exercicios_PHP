@@ -18,9 +18,10 @@
         </nav>
     </header>
     <main>
-        <section class="container">
+        <!--formulário completo de moedas-->
+        <!--<section class="container">
             <h1>Conversor de Moeda</h1>
-    <form action="resultado.php" method="POST">
+        <form action="resultado.php" method="POST">
         <label for="currencyFrom">De:</label>
         <select id="currencyFrom" name="currencyFrom" required>
             <option value="USD">Dólar Americano (USD)</option>
@@ -43,9 +44,15 @@
         <input type="number" id="amount" name="amount" placeholder="Digite o valor" required>
 
         <button type="submit">Converter</button>
-    </form>
+        </form>
 
-        </section>
+        </section>-->
+        <h1>Conversor de Moeda</h1>
+        <form action="resultado.php" method="get">
+            <label for="din">Converta o valor de sua carteira em Dólar</label>
+            <input type="number" name="real" id="real" step="0.01">
+            <input type="submit" value="Converter">
+        </form>
     </main>
     <footer></footer>
     

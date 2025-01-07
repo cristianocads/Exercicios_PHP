@@ -55,6 +55,7 @@
                 echo "Acesso inválido.";
             }*/
 
+ /* Minha forma de consumir o api de cotação do dólar           
             // URL da API do Banco Central para pegar o último valor do dólar
         
             $url = "https://api.bcb.gov.br/dados/serie/bcdata.sgs.1/dados/ultimos/1?formato=csv";
@@ -114,8 +115,31 @@
             echo "<h1>Resultado da Conversão</h1>";
             echo "<p><br>Seus " . numfmt_format_currency($padrao, $real, "BRL") . " reais é equivalente a <strong>" . numfmt_format_currency($padrao, $dolar, 'USD') . " dólares</strong>.</p><br>";
             echo "<p><em>Cotação do dólar: " . numfmt_format_currency($padrao, $cotacao, "BRL") . "</em></p>";
+*/
 
+//forma do Professor Gustavo Guanabara de Resolução do exercício
 
+            $inicio = date("m-d-Y", strtotime("-5 days"));
+            $fim = date("m-d-Y");
+
+            $url = 'https://olinda.bcb.gov.br/olinda/servico/PTAX/versao/v1/odata/CotacaoDolarPeriodo(dataInicial=@dataInicial,dataFinalCotacao=@dataFinalCotacao)?@dataInicial=\''. $inicio .'\'&@dataFinalCotacao=\''. $fim .'\'&$top=1&$orderby=dataHoraCotacao%20desc&$format=json&$select=cotacaoCompra,dataHoraCotacao';
+
+            $dados = json_decode(file_get_contents($url), true);
+
+            $cotacao = $dados["value"][0]["cotacaoCompra"];
+
+            // Recebe o valor em reais enviado pelo usuário
+            $real = $_REQUEST['real'];
+
+            $dolar = $real / $cotacao;
+
+            // Define o formato para moeda brasileira (BRL)
+            $padrao = numfmt_create('pt_BR', NumberFormatter::CURRENCY);
+
+            // Exibe o resultado da conversão
+            echo "<h1>Resultado da Conversão</h1>";
+            echo "<p><br>Seus " . numfmt_format_currency($padrao, $real, "BRL") . " reais é equivalente a <strong>" . numfmt_format_currency($padrao, $dolar, 'USD') . " dólares</strong>.</p><br>";
+            echo "<p><em>Cotação do dólar: " . numfmt_format_currency($padrao, $cotacao, "BRL") . "</em></p>";
 
 
         ?>

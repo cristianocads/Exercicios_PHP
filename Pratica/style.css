@@ -24,7 +24,7 @@ body {
     gap: 15px;
 }
 
-header, main, section, article {
+main, section, article {
     max-width: 700px;
 }
 

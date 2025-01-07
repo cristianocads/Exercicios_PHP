@@ -14,7 +14,7 @@
             <a class="menu" href="/desafio1/sucessor.html">Sucessor</a>
             <a class="menu" href="/desafio2/sorteador.html">Sorteador</a>
             <a class="menu" href="/desafio3/conversor.html">Conversor de Moeda</a>
-            <a class="menu" href="#exercicio1">Prática 4</a>
+            <a class="menu" href="/desafio4/analisador.html">Analisador de Número</a>
         </nav>
     </header>
     <main>

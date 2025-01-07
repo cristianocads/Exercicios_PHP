@@ -18,23 +18,12 @@
         </nav>
     </header>
     <main>
-        <section class="container">
-        <h1>Resultado</h1>
-        <p>
-            <?php 
-                $min = $_REQUEST["min"];
-                $max = $_REQUEST["max"];
-                $num = mt_rand("$min", "$max");
-
-                echo "<br>Gerando um número aleatório entre $min e $max";
-                echo "<br><p>O número gerado foi: <strong>$num</strong></p>";
-
-            ?>
-            <button onclick="javascript:document.location.reload()">&#x1F504 Gerar novamente</button>
-            <button onclick="javascript:history.go(-1)">&#x2B05; Voltar</button>
-            <!--<p><a href="javascript:history.go(-1)">Voltar</a></p>-->
-        </p>
-        </section>
+        <h1>Analisador de número real</h1>
+        <form action="analise.php" method="get">
+            <label for="num">Insira o número</label>
+            <input type="number" name="num" id="num" step="0.01">
+            <input type="submit" value="Converter">
+        </form>
     </main>
     <footer></footer>
     

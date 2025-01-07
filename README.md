@@ -1,5 +1,13 @@
 # Exercícios Práticos em PHP - Curso Gustavo Guanabara
 
+<div align="center">
+
+![PHP](https://img.shields.io/badge/php-%23777BB4.svg?style=for-the-badge&logo=php&logoColor=white)
+![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
+![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
+
+</div>
+
 Este repositório contém a resolução dos exercícios práticos do curso de **PHP para Iniciantes** ministrado por Gustavo Guanabara. Os exercícios foram desenvolvidos como parte do aprendizado, com foco em consolidar conceitos fundamentais da linguagem PHP.
 
 ```markdown
@@ -12,19 +20,16 @@ Este repositório contém a resolução dos exercícios práticos do curso de **
 - **Funções**: Criação e uso de funções, parâmetros e retorno de valores.
 - **Manipulação de Strings e Arrays**: Operações básicas, métodos úteis e exercícios aplicados.
 - **Formulários HTML e PHP**: Processamento de dados de formulários.
-- **Interação com Banco de Dados** (se aplicável): Conexão, consultas e manipulação 
-    de dados com MySQL.
 
 ## 📂 Estrutura do Repositório
 
 Os exercícios estão organizados em pastas conforme os tópicos abordados no curso:
 
-
 ├── Pratica
-    ¬ Sucessor e antesessor
-    ¬ Sorteador de números aleatórios
-    ¬
-    ¬
+    ¬ Desafio 1 - Sucessor e antesessor
+    ¬ Desafio 2 - Sorteador de números aleatórios
+    ¬ Desafio 3 - Conversor de Moeda
+    ¬ Desafio 4 - Analisador de número
 ├── EX001 (em atualização)
 ├── EX002 (em atualização)
 ├── EX003 (em atualização)
@@ -61,6 +66,13 @@ Este repositório é um projeto pessoal de aprendizado, mas se você encontrar m
 
 ## 📜 Licença
 
-```text
+```bash
 Sinta-se à vontade para adaptar as informações ao seu estilo e 
 incluir outros detalhes específicos.
+```
+
+<div align="center">
+
+![Static Badge](https://img.shields.io/badge/Colabore%20com%20seu%20conhecimento%20%F0%9F%A4%98-%233583F0)
+
+</div>

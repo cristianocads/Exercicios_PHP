@@ -22,14 +22,18 @@
             <?php 
                 $numero = $_REQUEST["num"] ?? 0;
 
-                // Converter para string e separar pelo ponto decimal
-                list($inteira, $fracionada) = explode('.', (string)$numero);
+                $inteira = (int) $numero;
 
-                echo "<br>Analisando o número <strong>$numero</strong> informado pelo usuário:<br><br>";
-                echo "<ul>";
-                echo "<li>Parte inteira: <strong>$inteira</strong></li><br>";
-                echo "<li>Parte fracionada: <strong>0,$fracionada</strong></li><br>";
-                echo "</ul>";
+                $fracionada = $numero - $inteira;
+
+                
+
+                echo "<br>Analisando o número <strong>". number_format($numero, 2, ",", ".") ."</strong> informado pelo usuário:<br><br>";
+                echo "<ul><li>Parte inteira: <strong>". number_format($inteira, 0, ",", ".") ."</strong></li><br>";
+                echo "<li>Parte fracionada: <strong>". number_format($fracionada, 2, ",", ".") ."</strong></li></ul><br>";
+
+/*                Outra forma - Converter para string e separar pelo ponto decimal
+                list($inteira, $fracionada) = explode('.', (string)$numero);*/
 
 /*
 // Outra forma de fazer a separação da parte inteira e fracionada

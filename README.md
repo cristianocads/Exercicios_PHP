@@ -19,6 +19,7 @@ Este repositório contém a resolução dos exercícios práticos do curso de **
     laços de repetição (`for`, `while`, `do-while`).
 - **Funções**: Criação e uso de funções, parâmetros e retorno de valores.
 - **Manipulação de Strings e Arrays**: Operações básicas, métodos úteis e exercícios aplicados.
+- **SuperGlobais**: Entendo super globais (GET, POST, REQUEST, etc)
 - **Formulários HTML e PHP**: Processamento de dados de formulários.
 
 ## 📂 Estrutura do Repositório
@@ -30,10 +31,8 @@ Os exercícios estão organizados em pastas conforme os tópicos abordados no cu
     ¬ Desafio 2 - Sorteador de números aleatórios
     ¬ Desafio 3 - Conversor de Moeda
     ¬ Desafio 4 - Analisador de número
-├── EX001 (em atualização)
-├── EX002 (em atualização)
-├── EX003 (em atualização)
-├── EX004 
+├── EX001 
+├── EX002 
 
 ```
 

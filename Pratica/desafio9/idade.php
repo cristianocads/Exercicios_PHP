@@ -23,26 +23,28 @@
         <h1>Calculando a sua idade</h1>
         <form action="<?=$_SERVER['PHP_SELF']?>" method="get">
             <label for="nasc">Em que ano você nasceu?</label>
-            <input type="number" name="nasc" id="nasc">
+            <input type="number" name="nasc" id="nasc" min="1900">
             <label for="final">Quer saber sua idade em qual ano?</label>
-            <input type="number" name="final" id="final">
+            <input type="number" name="final" id="final" min="1900">
             <input type="submit" value="Qual será minha idade?">
         </form>
     </main>
     <section>
         <h2>Resultado</h2>
         <?php 
-            $num1 = $_GET['num1'] ?? 0;
-            $num2 = $_GET['num2'] ?? 0;
+            $nasc = $_GET['nasc'] ?? 0;
+            $final = $_GET['final'] ?? 0;
 
-            $peso1 = $_GET['peso1'] ?? 1;
-            $peso2 = $_GET['peso2'] ?? 1;
+            $hoje = date('Y');
 
-            $simples = ($num1 + $num2)/2;
-            $pond = ($num1*$peso1 + $num2*$peso2)/($peso1 + $peso2);
+            $idade = ($final - $nasc);
+            $atual = ($hoje - $nasc);
+            
         ?>
 
-        <p>Quam nasceu em <?=$num1?> vai ter <?=$num2?> em <?=$num1?></p>
+        <p>Quem nasceu em <?=$nasc?> tem <strong><?=$idade?> anos</strong> em <?=$final?>.</p>
+        <br>
+        <p>Esse ano, a sua idade é <?=$atual?>.</p>
             
     </section>
     <footer></footer>

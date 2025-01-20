@@ -31,6 +31,8 @@ Os exercícios estão organizados em pastas conforme os tópicos abordados no cu
     ¬ Desafio 2 - Sorteador de números aleatórios
     ¬ Desafio 3 - Conversor de Moeda
     ¬ Desafio 4 - Analisador de número
+    ¬ Desafio 5 - Análise da divisão
+    ¬ Desafio 6 - Análise do salário
 ├── EX001 
 ├── EX002 
 
@@ -73,5 +75,7 @@ incluir outros detalhes específicos.
 <div align="center">
 
 ![Static Badge](https://img.shields.io/badge/Colabore%20com%20seu%20conhecimento%20%F0%9F%A4%98-%233583F0)
+
+![GitHub watchers](https://img.shields.io/github/watchers/cristianocads/Exercicios_PHP)
 
 </div>

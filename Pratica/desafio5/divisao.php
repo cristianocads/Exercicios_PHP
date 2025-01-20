@@ -12,8 +12,8 @@
         <nav >
             <a class="menu" href="/index.html">Início</a>
             <a class="menu" href="/desafio5/divisao.php">Divisão</a>
-            <a class="menu" href="#">#</a>
-            <a class="menu" href="#">#</a>
+            <a class="menu" href="/desafio6/salario.php">Salário</a>
+            <a class="menu" href="/desafio7/raiz.php">Raiz</a>
             <a class="menu" href="#">#</a>
             <a class="menu" href="#">#</a>
         </nav>
@@ -23,7 +23,7 @@
             $divisor = $_GET['Dsor'] ?? 1;
         ?>
     <main>
-        <h1>Analisador de número real</h1>
+        <h1>Anatomia da Divisão</h1>
         <form action="divisao.php" method="get">
             <label for="Dendo">Dividendo</label>
             <input type="number" name="Dendo" id="Dendo" value="<?=$dividendo?>">

@@ -16,6 +16,7 @@
             <a class="menu" href="/desafio7/raiz.php">Raiz</a>
             <a class="menu" href="/desafio8/medias.php">Médias</a>
             <a class="menu" href="/desafio9/idade.php">Cálculo da Idade</a>
+            <a class="menu" href="/desafio10/preco.php">Ajuste de Preço</a>
         </nav>
     </header>
     <?php 

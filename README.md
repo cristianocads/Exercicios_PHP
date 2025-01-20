@@ -36,6 +36,7 @@ Os exercícios estão organizados em pastas conforme os tópicos abordados no cu
     ¬ Desafio 7 - Raíz quadrado e cúbica
     ¬ Desafio 8 - Médias Aritiméticas
     ¬ Desafio 9 - Cálculo da Idade
+    ¬ Desafio 10 - Ajuste de preço
 
 ├── EX001 
 ├── EX002 

@@ -19,35 +19,37 @@
             <a class="menu" href="/desafio10/preco.php">Ajuste de Preço</a>
         </nav>
     </header>
+   <?php 
+        $preco = $_GET['preco'] ?? 0;
+        $ajuste = $_GET['ajuste'] ?? 0;
    
+   ?>
     <main>
-        <h1>Calculando a sua idade</h1>
+        <h1>Reajutador de Preços</h1>
         <form action="<?=$_SERVER['PHP_SELF']?>" method="get">
-            <label for="nasc">Em que ano você nasceu?</label>
-            <input type="number" name="nasc" id="nasc" min="1900">
-            <label for="final">Quer saber sua idade em qual ano?</label>
-            <input type="number" name="final" id="final" min="1900">
-            <input type="submit" value="Qual será minha idade?">
+            <label for="preco">Preço do Produto (R$)</label>
+            <input type="number" name="preco" id="preco" min="0.10" step="0.01">
+            <label for="ajuste">Qual será o percentual de reajuste? (<strong><span id="p">?</span>%</strong>)</label>
+            <input type="range" name="ajuste" id="ajuste" min="0" step="0.01" oninput="mudaValor()">
+            <input type="submit" value="Reajustar">
         </form>
     </main>
     <section>
-        <h2>Resultado</h2>
+        <h2>Resultado do Reajuste</h2>
         <?php 
-            $nasc = $_GET['nasc'] ?? 0;
-            $final = $_GET['final'] ?? 0;
-
-            $hoje = date('Y');
-
-            $idade = ($final - $nasc);
-            $atual = ($hoje - $nasc);
-            
+            $final = $preco + ($preco * ($ajuste / 100));
         ?>
+        
+        <p>O produto que custava R$ <?=number_format($preco, 2, ',', '.')?>, com <strong><?=$ajuste?>% de aumento</strong> vai passar a custar <strong>R$ <?=number_format($final, 2, ',', '.')?></strong> a partir de agora.</p>
 
-        <p>Quem nasceu em <?=$nasc?> tem <strong><?=$idade?> anos</strong> em <?=$final?>.</p>
-        <br>
-        <p>Esse ano, a sua idade é <?=$atual?>.</p>
-            
     </section>
+    <script>
+        mudaValor();
+
+        function mudaValor() {
+            p.innerText = ajuste.value;
+        }
+    </script>
     <footer></footer>
     
 </body>

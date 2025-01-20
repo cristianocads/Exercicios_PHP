@@ -18,31 +18,32 @@
             <a class="menu" href="/desafio9/idade.php">Cálculo da Idade</a>
         </nav>
     </header>
-    <?php 
-            $numero = $_GET['numero'] ?? 0;
-        ?>
+   
     <main>
-        <h1>Informe um número</h1>
+        <h1>Calculando a sua idade</h1>
         <form action="<?=$_SERVER['PHP_SELF']?>" method="get">
-            <label for="numero">Número</label>
-            <input type="number" name="numero" id="numero">
-            <input type="submit" value="Calcular Raízes">
+            <label for="nasc">Em que ano você nasceu?</label>
+            <input type="number" name="nasc" id="nasc">
+            <label for="final">Quer saber sua idade em qual ano?</label>
+            <input type="number" name="final" id="final">
+            <input type="submit" value="Qual será minha idade?">
         </form>
     </main>
     <section>
-        <h2>Resultado da Analise</h2>
-        <p>
-            <?php 
-                $quad = $numero ** (1 / 2); //sqrt($numero)
-                $cubo = $numero ** (1 / 3); //pow($numero, 1 / 3)
-                
-                echo "Analisando o <strong>número " . $numero . "</strong>, temos: \n";
+        <h2>Resultado</h2>
+        <?php 
+            $num1 = $_GET['num1'] ?? 0;
+            $num2 = $_GET['num2'] ?? 0;
 
-                echo "<br><ul><li>A sua raiz quadrada é <strong>" . number_format($quad, 3, ',', '.') . "</strong></li>";
-                echo "<li>A sua raiz cúbica é <strong>" . number_format($cubo, 3, ',', '.') . "</strong></li></ul>";
+            $peso1 = $_GET['peso1'] ?? 1;
+            $peso2 = $_GET['peso2'] ?? 1;
 
-            ?>
-        </p>
+            $simples = ($num1 + $num2)/2;
+            $pond = ($num1*$peso1 + $num2*$peso2)/($peso1 + $peso2);
+        ?>
+
+        <p>Quam nasceu em <?=$num1?> vai ter <?=$num2?> em <?=$num1?></p>
+            
     </section>
     <footer></footer>
     
